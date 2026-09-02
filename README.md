@@ -39,13 +39,27 @@ python -m first_commit_ai "Explain Git remotes like a shop dad."
 
 1. Edit `DEFAULT_SYSTEM` in `client.py` — make the voice yours  
 2. Point `OPENAI_BASE_URL` at Ollama or another compatible server  
-3. Add a second command (e.g. `--system "..."`) and a test for it  
+3. Add a second command (e.g. `--system "..."`) and a test for it — see [good first issues](https://github.com/primeodin/first-commit-ai/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+## Daily builds series
+
+Tiny, tested teaching repos — starter → mid. Ship one, read it, then climb:
+
+| Lane | Repo | Why open it |
+| --- | --- | --- |
+| Starter (this) | [first-commit-ai](https://github.com/primeodin/first-commit-ai) | Mock-first chat CLI + pytest |
+| Attention mid | [attention-warrior](https://github.com/primeodin/attention-warrior) | Transformer attention you can hold in one hand |
+| Shop skills | [mister-jay](https://github.com/primeodin/mister-jay) | Interactive DIY drills (vehicle, electrical, plumbing) — [live](https://primeodin.github.io/mister-jay/) |
+| Literacy (Sinhala) | [jay-ai-sinhala](https://github.com/primeodin/jay-ai-sinhala) | Friends 70+ learning GitHub + AI — [live](https://primeodin.github.io/jay-ai-sinhala/) |
+| Systems DIY | [camera-selector](https://github.com/primeodin/camera-selector) | NVR/Frigate camera planning — [live](https://primeodin.github.io/camera-selector/) |
+
+Coming next on the weekday cadence: RAG starter → tool agent → prompt lab → embeddings → vision → memory → shop-skill explainer.
+
+Profile forge: [github.com/primeodin](https://github.com/primeodin)
 
 ## Why this exists
 
-Most “AI starter” repos bury you under frameworks. This one is small enough to read on a coffee break, then push as **your** first public AI commit.
-
-Part of [PrimeOdin](https://github.com/primeodin)’s daily public builds for people learning AI by shipping.
+Most "AI starter" repos bury you under frameworks. This one is small enough to read on a coffee break, then push as **your** first public AI commit.
 
 ## License
 
