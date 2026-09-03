@@ -32,8 +32,9 @@ class ChatClient:
     def chat(self, prompt: str) -> str:
         if self.mock:
             return (
-                "[mock] This is a canned reply. Change the system prompt in client.py "
-                f"to make it yours. (you said: {prompt!r})"
+                "[mock] canned reply"
+                f" | system={self.system!r}"
+                f" | you said: {prompt!r}"
             )
         if not self.api_key:
             raise RuntimeError(
