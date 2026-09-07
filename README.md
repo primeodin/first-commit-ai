@@ -14,7 +14,18 @@ pytest
 python -m first_commit_ai --mock "hi"
 ```
 
-You should see a `[mock]` reply. That means the wiring works before you spend a token.
+**Expected stdout** (deterministic on `--mock` — yours should match):
+
+```text
+# pytest
+.......                                                                  [100%]
+7 passed
+
+# mock ask
+[mock] canned reply | system='You are a clear shop-style teacher. Keep answers short, concrete, and honest.' | you said: 'hi'
+```
+
+That `[mock]` line means the wiring works before you spend a token. If the system string drifts, `DEFAULT_SYSTEM` in `client.py` changed — open an issue before "fixing" mock text by eye.
 
 ## Real chat (optional)
 
