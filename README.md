@@ -59,6 +59,8 @@ Scoped tickets live in [Issues](https://github.com/primeodin/first-commit-ai/iss
 - **#5** — [`--json` CLI output](https://github.com/primeodin/first-commit-ai/issues/5) for reply + mock/real mode
 - **#6** — [Ollama / local server walkthrough](https://github.com/primeodin/first-commit-ai/issues/6) under `docs/`
 
+Shop note (why the dry-fit comes first): **[docs/why-mock.md](docs/why-mock.md)** — hand-worked mock vs live doors, CI without secrets, when not to delete `--mock`.
+
 Claim one in a comment, ask questions in the thread, ship it. Docs count.
 
 ## Daily builds series
@@ -85,6 +87,8 @@ Profile forge: [github.com/primeodin](https://github.com/primeodin)
 ## Why this exists
 
 Most "AI starter" repos bury you under frameworks. This one is small enough to read on a coffee break, then push as **your** first public AI commit.
+
+Deeper shop note: **[why `--mock` exists](docs/why-mock.md)** — same prompt through two doors; green CI without a key is proof of plumbing, not model vibes.
 
 ## License
 
