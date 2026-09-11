@@ -1,3 +1,2 @@
-"""Tiny chat CLI for your first AI GitHub commit."""
-
-__version__ = "0.1.0"
+__version__ = "0.1.0" 
+__all__ = ["__version__"]
