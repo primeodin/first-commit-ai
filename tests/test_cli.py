@@ -1,5 +1,18 @@
+import json
+
 from first_commit_ai.cli import build_parser, main
 from first_commit_ai.client import DEFAULT_SYSTEM, ChatClient
+
+
+def test_json_output_structure(capsys):
+    code = main(["--mock", "--json", "hi"])
+    captured = capsys.readouterr()
+    assert code == 0
+    data = json.loads(captured.out)
+    assert data["reply"].startswith("[mock]")
+    assert "hi" in data["reply"]
+    assert data["mock"] is True
+    assert data["system"] == DEFAULT_SYSTEM
 
 
 def test_mock_chat_is_deterministic():

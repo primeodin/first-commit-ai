@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 
 from first_commit_ai.client import DEFAULT_SYSTEM, ChatClient
@@ -35,6 +36,11 @@ def build_parser() -> argparse.ArgumentParser:
         metavar="TEXT",
         help=f"Override the system prompt (default: {DEFAULT_SYSTEM!r})",
     )
+    p.add_argument(
+        "--json",
+        action="store_true",
+        help="Print the reply as a JSON object (reply, mock, system)",
+    )
     return p
 
 
@@ -44,7 +50,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.system is not None:
         client.system = args.system
     try:
-        print(client.chat(args.prompt))
+        reply = client.chat(args.prompt)
+        if args.json:
+            print(json.dumps({"reply": reply, "mock": bool(args.mock), "system": client.system}))
+        else:
+            print(reply)
     except Exception as exc:  # noqa: BLE001 — teach failures clearly
         print(f"error: {exc}", file=sys.stderr)
         return 1
