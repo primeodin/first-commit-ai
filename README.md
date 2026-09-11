@@ -37,6 +37,8 @@ export OPENAI_API_KEY=sk-...
 python -m first_commit_ai "Explain Git remotes like a shop dad."
 ```
 
+For a local walkthrough, see [docs/ollama.md](docs/ollama.md).
+
 ## What you just built
 
 | File | Job |
